@@ -25,29 +25,33 @@
     <script src="js/sketchPad.js"></script>
     <script type="module"">
 
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
-        import { getDatabase, ref, get, set, child } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-database.js";
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+        import { getDatabase, ref, get, set, child } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-database.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
         // Your web app's Firebase configuration
         const firebaseConfig = {
-        apiKey: "AIzaSyBxkSozATt75uE_5QCJEegSE96EFQOCMHM",
-        authDomain: "alphabet-ai-app.firebaseapp.com",
-        databaseURL: "https://alphabet-ai-app-default-rtdb.europe-west1.firebasedatabase.app",
-        projectId: "alphabet-ai-app",
-        storageBucket: "alphabet-ai-app.appspot.com",
-        messagingSenderId: "538842582762",
-        appId: "1:538842582762:web:6df20e954826b644c55193"
-    };
+            apiKey: "AIzaSyAiPUGAm0WkGNR9Q2qbhBIPW7HCaOdY-88",
+            authDomain: "ai-arabic-teacher.firebaseapp.com",
+            databaseURL: "https://ai-arabic-teacher-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "ai-arabic-teacher",
+            storageBucket: "ai-arabic-teacher.appspot.com",
+            messagingSenderId: "972328267395",
+            appId: "1:972328267395:web:69fd8a24c9e84371e4f5b6"
+        };
 
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    
-    // get ref to database services
-    const db = getDatabase(app);
-        
-    document.getElementById("advanceBtn").addEventListener('click', function(e){
-        e.preventDefault();
-        set(ref(db, 'data/'+counter), JSON.stringify(data))
-    });
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+
+        const db = getDatabase(app);
+                
+            document.getElementById("advanceBtn").addEventListener('click', function(e){
+                e.preventDefault();
+                set(ref(db, 'data/'+counter), JSON.stringify(data))
+            });
+
     </script>
     <script>
         counter = 1;
