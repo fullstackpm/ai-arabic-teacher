@@ -1,0 +1,23 @@
+{
+  "name": "ai-alphabet-teacher",
+  "version": "1.0.0",
+  "description": "Using AI to teach users how to read and write in Arabic",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saidursikder/ai-arabic-teacher.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saidursikder/ai-arabic-teacher/issues"
+  },
+  "homepage": "https://github.com/saidursikder/ai-arabic-teacher#readme",
+  "dependencies": {
+    "firebase": "^9.22.0",
+    "nodemon": "^2.0.22"
+  }
+}
