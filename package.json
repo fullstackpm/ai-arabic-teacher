@@ -1,10 +1,11 @@
 {
-  "name": "ai-alphabet-teacher",
+  "name": "ai-arabic-teacher",
   "version": "1.0.0",
-  "description": "Using AI to teach users how to read and write in Arabic",
+  "description": "using AI to teach people how to read and write Arabic",
   "main": "server.js",
   "scripts": {
-    "test": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -15,10 +16,5 @@
   "bugs": {
     "url": "https://github.com/saidursikder/ai-arabic-teacher/issues"
   },
-  "homepage": "https://github.com/saidursikder/ai-arabic-teacher#readme",
-  "dependencies": {
-    "firebase": "^9.22.0",
-    "nodemon": "^2.0.22",
-    "express": "^4.18.2"
-  }
+  "homepage": "https://github.com/saidursikder/ai-arabic-teacher#readme"
 }
