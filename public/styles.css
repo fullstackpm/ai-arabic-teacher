@@ -112,6 +112,7 @@ button:disabled:hover {
 #sketchPadContainer {
   visibility: hidden;
   margin-top: 10px;
+  box-sizing: border-box;
 }
 
 /* Set a maximum scale for the viewport */
