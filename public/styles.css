@@ -1,14 +1,8 @@
-/* body {
-    font-family: Arial;
-    background-color: skyblue;
-    overscroll-behavior: contain;
-} */
-
 html,
 body {
     font-family: Arial;
     background-color: skyblue;
-    position: fixed;
+    /* position: fixed; */
     overflow: hidden;
 }
 
@@ -16,7 +10,7 @@ body > .mainwrapper {
     width: 100vw;
     height: 100vh;
     overflow-y: scroll;
-    -webkit-overflow-scrolling: touch; /* enables “momentum” (smooth) scrolling */
+    -webkit-overflow-scrolling: touch;
   }
 
 #content {
