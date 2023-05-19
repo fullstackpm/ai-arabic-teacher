@@ -48,6 +48,27 @@ html {
   background-color: skyblue;
   position: fixed;
   overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+/* Set flex properties for mainwrapper */
+.mainwrapper {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    justify-content: center;
+  }
+
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 100vw;
 }
 
 /* Apply overscroll-behavior property to body on Safari */
@@ -93,22 +114,11 @@ button:disabled:hover {
   margin-top: 10px;
 }
 
-/* Set flex properties for mainwrapper */
-.mainwrapper {
-  width: 100vw;
-  height: 100vh;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 /* Set a maximum scale for the viewport */
 @media (max-width: 900px) {
   html,
   body {
-    max-height: 90vh;
-    max-width: 90vw;
+    max-height: 100vh;
+    max-width: 100vw;
   }
 }
