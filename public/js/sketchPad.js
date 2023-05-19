@@ -16,7 +16,7 @@ class SketchPad{
         this.undoBtn=document.createElement("button");
         this.undoBtn.innerHTML="UNDO";
         container.appendChild(this.undoBtn);
-
+        this.isTouching = false;
         this.ctx=this.canvas.getContext("2d");
 
         this.reset();
@@ -47,15 +47,20 @@ class SketchPad{
         document.onmouseup=()=>{
             this.isDrawing = false;
         }
+
         this.canvas.ontouchstart=(evt)=>{
+            this.isTouching = true;
             const loc=evt.touches[0];
             this.canvas.onmousedown(loc);
         }
         this.canvas.ontouchmove=(evt)=>{
-            const loc=evt.touches[0];
-            this.canvas.onmousemove(loc);
+            if(this.isTouching){
+                const loc=evt.touches[0];
+                this.canvas.onmousemove(loc);
+            }
         }
         document.ontouchend=()=>{
+            this.isTouching = false;
             this.canvas.onmouseup();
         }
         this.undoBtn.onclick=()=>{
